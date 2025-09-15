@@ -18,7 +18,7 @@ router.get('/',(req,res)=>{
 router.post('/',(req,res)=>{
     const {title} = req.body;
     if(!title || title.trim()===""){
-            return res.status(500).json({error: err.message})
+            return res.status(400).json({error: err.message})
         }
     const query = "insert into todos(title) values(?)"
     db.query(query,[title],(err,result,fields)=>{
