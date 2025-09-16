@@ -6,7 +6,7 @@ import router from './routes/routes.js';
 dotenv.config();
 const app = express();
 app.use(cors({
-    origin: process.env.FRONTEND_URL || "*", // FRONTEND_URL to be set in Render later
+    origin: process.env.FRONTEND_URL, // FRONTEND_URL to be set in Render later
     methods: ["GET","POST","PUT","DELETE"],
     credentials: true
 }));
