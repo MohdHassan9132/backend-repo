@@ -25,7 +25,7 @@ router.post('/',(req,res)=>{
         
         if(err){
             console.error(err)
-            return res.status(500).json({message: "Title cant be empty"});
+            return res.status(500).json({message: "Title cannot be empty"});
         }
         res.status(201).json({ id : result.insertId,
             title,
